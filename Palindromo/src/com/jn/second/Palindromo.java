@@ -28,8 +28,7 @@ public class Palindromo {
 
 	public static boolean validPalindrome(String text) {
 
-		text = text.toLowerCase().replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
-				.replace("ú", "u").replace(" ", "").replace(".", "").replace(",", "");
+		text = text.toLowerCase().replaceAll("[^a-zA-Z0-9]+", "");
 
 		String inverted = new StringBuilder(text).reverse().toString();
 
